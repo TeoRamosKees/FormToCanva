@@ -45,7 +45,8 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
         nombreCarnet.style.fontSize = `${originalFontSize}%`;
         identificacionCarnet.style.fontSize = `${originalFontSize}%`;
 
-        location.reload();
+        document.getElementById('carnetContainer').style.display = 'none';
+        window.alert("Carnet creado con exito!")
     });
 });
 
