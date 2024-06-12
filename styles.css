@@ -44,8 +44,8 @@ button {
 
 #infoContainer {
     position: absolute;
-    top: 180px; 
-    left: 65px; 
+    top: 72%; 
+    left: 18%; 
     display: flex;
     gap: 10px; 
 }
