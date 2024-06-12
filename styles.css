@@ -27,28 +27,27 @@ button {
 #carnetContainer {
     margin-top: 20px;
     position: relative;
-    width: 90vw; /* Ajusta según el tamaño de tu imagen */
-    max-width: 400px; /* Mantiene proporción en dispositivos grandes */
-    height: auto; /* Ajuste automático */
+    width: 400px; 
+    height: 250px; 
 }
 
 #carnet {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #backgroundImage {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #infoContainer {
     position: absolute;
-    top: 205px; /* Ajusta según la posición deseada */
-    left: calc(-40px + 25% + 10px); /* Ajuste flexible */
+    top: 180px; 
+    left: 65px; 
     display: flex;
-    gap: 10px; /* Espacio entre los textos */
+    gap: 10px; 
 }
 
 #nombreCarnet, #identificacionCarnet {
