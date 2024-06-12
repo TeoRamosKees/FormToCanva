@@ -38,8 +38,11 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
         link.download = 'carnet.png';
         link.click();
 
+        carnetElement.style.width = `${originalWidth}px`;
+        carnetElement.style.height = `${originalHeight}px`;
+
+        setTimeout('',1000);
         document.getElementById('carnetContainer').style.display = 'none';
-        window.alert("Carnet creado con exito!")
     });
 });
 
