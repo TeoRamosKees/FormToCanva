@@ -40,9 +40,8 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
 
         carnetElement.style.width = `${originalWidth}px`;
         carnetElement.style.height = `${originalHeight}px`;
-
-        setTimeout('',1000);
-        document.getElementById('carnetContainer').style.display = 'none';
+        nombreCarnet.style.fontSize = `${100 / scale}%`;
+        identificacionCarnet.style.fontSize = `${100 / scale}%`;
     });
 });
 
