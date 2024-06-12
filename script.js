@@ -41,6 +41,8 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
         // Restaurar el tamaño original del contenedor del carnet
         carnetElement.style.width = `${originalWidth}px`;
         carnetElement.style.height = `${originalHeight}px`;
+        nombreCarnet.style.fontSize = `100%`;
+        identificacionCarnet.style.fontSize = `100%`;
     });
 });
 
