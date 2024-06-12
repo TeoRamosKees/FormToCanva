@@ -30,18 +30,19 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
     nombreCarnet.style.fontSize = `${100 * scale}%`;
     identificacionCarnet.style.fontSize = `${100 * scale}%`;
 
+    // Esperar un segundo y luego ejecutar el html2canvas
+    setTimeout(() => {
+        html2canvas(carnetElement, { scale }).then(canvas => {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = 'carnet.png';
+            link.click();
 
-    // Generar y descargar la imagen del carnet
-    html2canvas(carnetElement, { scale }).then(canvas => {
-        const link = document.createElement('a');
-        link.href = canvas.toDataURL('image/png');
-        link.download = 'carnet.png';
-        link.click();
-
-        carnetElement.style.width = `${originalWidth}px`;
-        carnetElement.style.height = `${originalHeight}px`;
-        nombreCarnet.style.fontSize = `${100}%`;
-        identificacionCarnet.style.fontSize = `${100}%`;
-    });
+            carnetElement.style.width = `${originalWidth}px`;
+            carnetElement.style.height = `${originalHeight}px`;
+            nombreCarnet.style.fontSize = `${100}%`;
+            identificacionCarnet.style.fontSize = `${100}%`;
+        });
+    }, 1000);
 });
 
