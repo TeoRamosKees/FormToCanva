@@ -25,23 +25,29 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
     const originalWidth = carnetElement.offsetWidth;
     const originalHeight = carnetElement.offsetHeight;
 
-    carnetElement.style.width = `${originalWidth * scale}px`;
-    carnetElement.style.height = `${originalHeight * scale}px`;
-    nombreCarnet.style.fontSize = `${100 * scale}%`;
-    identificacionCarnet.style.fontSize = `${100 * scale}%`;
+    // carnetElement.style.width = `${originalWidth * scale}px`;
+    // carnetElement.style.height = `${originalHeight * scale}px`;
+    // nombreCarnet.style.fontSize = `${100 * scale}%`;
+    // identificacionCarnet.style.fontSize = `${100 * scale}%`;
 
 
     // Generar y descargar la imagen del carnet
-    html2canvas(carnetElement, { scale }).then(canvas => {
+    // html2canvas(carnetElement, { scale }).then(canvas => {
+    //     const link = document.createElement('a');
+    //     link.href = canvas.toDataURL('image/png');
+    //     link.download = 'carnet.png';
+    //     link.click();
+
+    //     carnetElement.style.width = `${originalWidth}px`;
+    //     carnetElement.style.height = `${originalHeight}px`;
+    //     nombreCarnet.style.fontSize = `${100 / scale}%`;
+    //     identificacionCarnet.style.fontSize = `${100 / scale}%`;
+    // });
+    html2canvas(document.querySelector("#carnet")).then(canvas => {
         const link = document.createElement('a');
         link.href = canvas.toDataURL('image/png');
         link.download = 'carnet.png';
         link.click();
-
-        carnetElement.style.width = `${originalWidth}px`;
-        carnetElement.style.height = `${originalHeight}px`;
-        nombreCarnet.style.fontSize = `${100 / scale}%`;
-        identificacionCarnet.style.fontSize = `${100 / scale}%`;
     });
 });
 
