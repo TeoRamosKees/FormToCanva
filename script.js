@@ -16,7 +16,6 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
     // Ajustar letra paralelo al carnet #nombreCarnet, #identificacionCarnet
     const nombreCarnet = document.getElementById('nombreCarnet');
     const identificacionCarnet = document.getElementById('identificacionCarnet');
-    const originalFontSize = nombreCarnet.style.fontSize;
 
     // Obtener la escala de la densidad de píxeles
     const scale = window.devicePixelRatio;
@@ -38,12 +37,6 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
         link.href = canvas.toDataURL('image/png');
         link.download = 'carnet.png';
         link.click();
-
-        // Restaurar el tamaño original del contenedor del carnet
-        carnetElement.style.width = `${originalWidth}px`;
-        carnetElement.style.height = `${originalHeight}px`;
-        nombreCarnet.style.fontSize = `${originalFontSize}%`;
-        identificacionCarnet.style.fontSize = `${originalFontSize}%`;
 
         document.getElementById('carnetContainer').style.display = 'none';
         window.alert("Carnet creado con exito!")
