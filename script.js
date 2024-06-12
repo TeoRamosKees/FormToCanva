@@ -44,6 +44,8 @@ document.getElementById('carnetForm').addEventListener('submit', function(event)
         carnetElement.style.height = `${originalHeight}px`;
         nombreCarnet.style.fontSize = `${originalFontSize}%`;
         identificacionCarnet.style.fontSize = `${originalFontSize}%`;
+
+        location.reload();
     });
 });
 

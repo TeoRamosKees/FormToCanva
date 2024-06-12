@@ -7,21 +7,55 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    background-color: #f0f0f0;
 }
 
 form {
     display: flex;
     flex-direction: column;
     width: 300px;
+    background-color: #191552;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
-label, input {
+form label {
+    margin: 10px 0 5px 0;
+}
+
+form input {
     margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form input::placeholder {
+    color: #aaa;
 }
 
 button {
     margin-top: 10px;
     padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 80px; /* Ajusta según sea necesario */
+    height: auto;
 }
 
 #carnetContainer {
